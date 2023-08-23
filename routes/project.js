@@ -14,8 +14,11 @@ router.get("/", getProjects);
 
 router.get("/:projectId", getProject);
 
-router.get("/project", getCreateProject);
-router.post("/project", postCreateProject);
+router.get("/create/project", getCreateProject);
+router.post("/create/project", postCreateProject);
 
-router.get("/issue", getCreateIssue);
-router.post("/issue", postCreateIssue);
+router.get("/create/issue", getCreateIssue);
+router.post("/create/issue", postCreateIssue);
+
+
+module.exports=router;

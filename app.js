@@ -1,12 +1,12 @@
-const PORT=5000;
+const PORT=5173;
 const express = require('express');
-
+const projectRouter=require('./routes/project')
 
 
 const app=express();
 
 
-app.use('/',);
+app.use('/',projectRouter);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
