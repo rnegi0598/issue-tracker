@@ -1,6 +1,53 @@
+<!DOCTYPE html>
 <html>
-    <title>create project page</title>
-</html>
+
+<head>
+  <title>create project</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/create-project.css">
+  <script src="/js/create-project.js" defer></script>
+
+</head>
+
 <body>
-    <h1>create project page</h1>
+  <%- include('../partials/navbar.ejs') %>
+  <section class="breadcrumbs">
+    <span>home</span>
+    <span class="separator active">/</span>
+    <span class="active">Create-Project</span>
+  </section>
+
+  <main>
+
+    <form class="stepper" action="/create/project" method="post">
+      <div class="accordian accordian-1">
+        <h2>Enter Project Title</h2>
+        <p>
+          <input name="title" type="text" required>
+          <span class="next">Next</span>
+        </p>
+      </div>
+      <div class="accordian accordian-2">
+        <h2>Enter Project Author</h2>
+        <p class="fold">
+          <input name="author" type="text" required>
+          <span class="next">Next</span>
+          <span class="back">Back</span>
+
+        </p>
+      </div>
+      <div class="accordian accordian-3">
+        <h2>Enter Project Description</h2>
+        <p class="fold">
+          <input name="description" type="text" required><br>
+          <button class="finish" type="submit">Finish</button>
+          <span class="back">Back</span>
+
+        </p>
+      </div>
+    </form>
+
+  </main>
 </body>
+
+</html>

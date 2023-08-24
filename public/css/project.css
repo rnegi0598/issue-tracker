@@ -1,0 +1,143 @@
+.project {
+  margin: 20px 5vw;
+  border: 1px solid gray;
+  padding: 10px;
+}
+.project  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.project .label {
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-decoration: underline;
+  font-size: 1.3rem;
+
+}
+.project .value {
+  font-size: 1.2rem;
+}
+
+/* issue create header */
+.issue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c0c0c0;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 5vw 1rem 5vw;
+
+}
+
+
+.issue a {
+  background-color: #d3d3d3;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* issue filter */
+.issue-filter {
+  background-color: #c0c0c0;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 0 5vw;
+}
+.issue-filter h2{
+    margin: 10px 0;
+    padding-bottom:5px;
+    border-bottom: 1px solid white;
+}
+.filter-wrapper{
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    row-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.filter-wrapper .flex-item{
+  flex-grow: 1;
+}
+.filter-wrapper .label{
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+.filter-wrapper .value{
+  width: 100%;
+}
+.filter-wrapper input{
+    outline: none;
+    border: none;
+    background-color: #e3e3e3;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 250px;
+}
+
+
+/* issue display */
+.issue-display{
+  margin: 1rem 5vw 1rem 5vw;
+}
+.issue-display .issue-wrapper{
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 5px;
+
+}
+.issue-display .issue-wrapper .flex-item{
+  background-color: #e3e3e3;
+  padding: 5px;
+  flex-grow: 1;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  
+}
+.issue-display .issue-wrapper .flex-item.labels{
+  background-color: inherit;
+}
+.issue-display .issue-wrapper .title{
+  font-weight: 900;
+}
+.issue-display .issue-wrapper .issue-label{
+  background-color: red;
+  border-radius: 20px;
+  color:white;
+  padding :5px 15px;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+
+/* labels */
+.tags-list {
+  /* border: 1px solid red; */
+  margin-bottom: 5px;
+}
+.tags-list .tag {
+  border: 1px solid white;
+  padding: 2px 5px;
+  border-radius: 2px;
+  /* margin-bottom: 5px; */
+  margin-right: 5px;
+  /* cursor: pointer; */
+}

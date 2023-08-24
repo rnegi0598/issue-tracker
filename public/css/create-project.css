@@ -1,0 +1,52 @@
+main {
+  margin: 5vw;
+}
+
+.stepper {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.accordian {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.accordian p {
+  background-color: gray;
+  color: white;
+  padding: 1em;
+  overflow: hidden;
+}
+.accordian p.fold {
+  height: 0;
+  padding: 0;
+}
+.accordian input {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: lightgray;
+  padding: 5px;
+  font-size: 1rem;
+}
+.accordian button {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: 1em;
+  padding: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.accordian span {
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 1em;
+  padding: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}

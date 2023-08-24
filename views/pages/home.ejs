@@ -1,46 +1,51 @@
+<!DOCTYPE html>
 <html>
+
+<head>
   <title>Home</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/home.css" />
-</html>
+
+</head>
+
 <body>
-  <nav>
-    <h2>CN-IssueTracker</h2>
-    <div class="avatar-wrapper">
-      <img src="images/avatar.svg" alt="avatar" />
-    </div>
-  </nav>
+  <!-- navabar -->
+  <%- include('../partials/navbar.ejs') %>
+  <!--breadcrumbs  -->
   <section class="breadcrumbs">
     <span class="active">home</span>
   </section>
+  <!-- main -->
   <main class="projects-display">
     <div class="projects-header">
-        <h2>Projects</h2>
-        <a href="/create/project" title="Create new project">
-            <img src="images/add.svg" alt="add">
-        </a>
+      <h2>Projects</h2>
+      <a href="/create/project" title="Create new project">
+        <img src="images/add.svg" alt="add">
+      </a>
     </div>
     <div class="projects-wrapper">
-    <% for(let i=0;i<projects.length;i++){ %>
-          <a href="/<%= projects[i].projectId %>" class="project-link" id="<%= projects[i].projectId %>">
-              <div class="project-wrapper">
-                  <div class="project-flex">
-                      <div class="title">
-                          <p class="label">Title</p>
-                          <p class="value"><%= projects[i].title  %></p>
-                      </div>
-                      <div class="author">
-                          <p class="label">Author</p>
-                          <p class="value"><%= projects[i].author  %></p>
-                      </div>
-                  </div>
-                  <div class="description">
-                      <p class="label">Description</p>
-                      <p class="value"><%= projects[i].description  %></p>
-                  </div>
-              </div>
-          </a>
-    <%} %>
-  </div>
+      <% for(let i=0;i<projects.length;i++){ %>
+      <a href="/<%= projects[i]._id %>" class="project-link" id="<%= projects[i].projectId %>">
+        <div class="project-wrapper">
+          <div class="project-flex">
+            <div class="title">
+              <p class="label">Title</p>
+              <p class="value"><%= projects[i].title  %></p>
+            </div>
+            <div class="author">
+              <p class="label">Author</p>
+              <p class="value"><%= projects[i].author  %></p>
+            </div>
+          </div>
+          <div class="description">
+            <p class="label">Description</p>
+            <p class="value"><%= projects[i].description  %></p>
+          </div>
+        </div>
+      </a>
+      <%} %>
+    </div>
   </main>
 </body>
+
+</html>

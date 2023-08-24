@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const projectSchema = mongoose.Schema({
-  projectId: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-  },
   title: {
     type: String,
     required: true,
@@ -17,15 +13,12 @@ const projectSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  issues: {
-    type: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Issue",
-      },
-    ],
-    required: true,
-  },
+  issues: [
+    {
+      type: Object,
+    },
+  ],
+ 
 });
 
 module.exports = mongoose.model("Project", projectSchema);

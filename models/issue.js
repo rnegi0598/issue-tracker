@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 
 
 const issueSchema=mongoose.Schema({
-    issueId:{
-        type:mongoose.Schema.Types.ObjectId,
-        required:true,
-    },
     title:{
         type:String,
         required:true,

@@ -1,6 +1,102 @@
+<!DOCTYPE html>
 <html>
-    <title>project page</title>
-</html>
+
+<head>
+
+  <title>Project</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/project.css">
+  <script src="/js/project.js" defer></script>
+</head>
+
 <body>
-    <h1>project page</h1>
+  <!-- navbar -->
+  <%- include('../partials/navbar.ejs') %>
+  <!-- breadcrumbs -->
+  <section class="breadcrumbs">
+    <span>home</span>
+    <span class="separator active">/</span>
+    <span class="active">Project</span>
+  </section>
+  <!-- project -->
+  <div class="project">
+      <div class="title">
+        <p class="label">Title</p>
+        <p class="value"><%= project.title  %></p>
+      </div>
+      <div class="author">
+        <p class="label">Author</p>
+        <p class="value"><%= project.author  %></p>
+      </div>
+    <div class="description">
+      <p class="label">Description</p>
+      <p class="value"><%= project.description  %></p>
+    </div>
+  </div>
+
+  <!-- issue create -->
+  <div class="issue">
+    <h2>Issues</h2>
+    <a href="/create/issue/<%=project._id%>" title="Create new issue">
+      <img src="/images/add.svg" alt="add">
+    </a>
+  </div>
+  <!-- issue filter -->
+  <div class="issue-filter">
+    <h2>Filter</h2>
+
+    <div class="filter-wrapper">
+      <div class="title-filter flex-item">
+        <h3 class="label">Title</h3>
+        <div class="value">
+          <input type="text">
+        </div>
+      </div>
+      <div class="author-filter flex-item">
+        <h3 class="label">Author</h3>
+        <div class="value">
+          <input type="text">
+        </div>
+      </div>
+      <div class="description-filter flex-item">
+        <h3 class="label">Description</h3>
+        <div class="value">
+          <input type="text">
+        </div>
+      </div>
+      <div class="label-filter flex-item">
+        <h3 class="label">Label</h3>
+        <p class="tags-list">
+        </p>
+        <div class="value">
+          <input type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- issue display -->
+  <div class="issue-display">
+    <div class="issues-wrapper">
+      <% project.issues.forEach((issue)=>{ %>
+      <div class="issue-wrapper">
+        <p class="flex-item title"><%= issue.title %></p>
+        <p class="flex-item author"><%= issue.author %></p>
+        <p class="flex-item description"><%= issue.description %></p>
+        <div class="flex-item labels">
+          <% issue.labels.forEach((label)=>{%>
+          <span class="issue-label"><%= label%></span>
+          <%}) %>
+        </div>
+      </div>
+      <%}) %>
+    </div>
+  </div>
+
+
+
+
+
 </body>
+
+</html>

@@ -1,6 +1,65 @@
+<!DOCTYPE html>
 <html>
-    <title>create issue page</title>
-</html>
+
+<head>
+  <title>Create Issue</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/create-issue.css">
+  <script src="/js/create-issue.js" defer></script>
+</head>
+
 <body>
-    <h1>create issue page</h1>
+  <%- include('../partials/navbar.ejs') %>
+  <section class="breadcrumbs">
+    <span>Home</span>
+    <span class="separator active">/</span>
+    <span class="active">Create-Issue</span>
+  </section>
+
+
+  <main>
+
+    <form class="stepper" action="/create/issue/<%=projectId%>" method="post">
+      <div class="accordian accordian-1">
+        <h2>Enter Issue Title</h2>
+        <div class="accordian-div">
+          <input name="title" type="text" >
+          <span class="accordian-span next">Next</span>
+        </div>
+      </div>
+      <div class="accordian accordian-2">
+        <h2>Enter Issue Author</h2>
+        <div class="fold accordian-div">
+          <input name="author" type="text" >
+          <span class="accordian-span next">Next</span>
+          <span class="accordian-span back">Back</span>
+
+        </div>
+      </div>
+      <div class="accordian accordian-3">
+        <h2>Enter Issue Description</h2>
+        <div class="fold accordian-div">
+          <input name="description" type="text" >
+          <span class="accordian-span next">Next</span>
+          <span class="accordian-span back">Back</span>
+
+        </div>
+      </div>
+      <div class="accordian accordian-4">
+        <h2>Enter Issue Labels</h2>
+        <div class="fold accordian-div">
+          <p class="tags-list hide">
+          </p>
+          <input class="tag-input" name="labels" type="text" >
+          <button class="finish" type="submit">Finish</button>
+          <span class="accordian-span back">Back</span>
+        </div>
+      </div>
+    </form>
+
+  </main>
+
+
 </body>
+
+</html>
