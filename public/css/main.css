@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.breadcrumbs{
+    padding: 10px 5vw;
+}
+.breadcrumbs span{
+    text-transform: capitalize;
+    
+}
+.breadcrumbs span:not(.active){
+    text-decoration: underline;
+   
+}

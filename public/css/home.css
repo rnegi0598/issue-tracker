@@ -1,0 +1,76 @@
+nav {
+  background-color: #e5e4e2;
+  padding: 10px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  background-color: #d3d3d3;
+  padding: 5px;
+}
+
+/* projects  */
+
+.projects-display {
+  margin: 10px 5vw;
+}
+.projects-display .projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c0c0c0;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.projects-header a {
+  background-color: #d3d3d3;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-link {
+  color: inherit;
+  text-decoration: none;
+  width: 400px;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-grow: 1;
+  align-self: flex-start;
+  
+}
+.project-wrapper {
+  padding: 1em;
+  border: 1px solid gray;
+}
+
+.project-wrapper .project-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.project-wrapper .label {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+.project-wrapper .value {
+  font-size: 1rem;
+}
+

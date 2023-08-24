@@ -5,6 +5,7 @@ const projectRouter=require('./routes/project')
 
 const app=express();
 
+app.use(express.static('public'))
 
 app.use('/',projectRouter);
 
