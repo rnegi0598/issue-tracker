@@ -9,14 +9,18 @@
 </head>
 
 <body>
+  <!-- navbar -->
   <%- include('../partials/navbar.ejs') %>
+  <!-- breadcrumbs -->
   <section class="breadcrumbs">
-    <span>Home</span>
+    <span><a href="/">Home</a></span>
+    <span class="separator active">/</span>
+    <span><a href="/<%=projectId%>">Project</a></span>
     <span class="separator active">/</span>
     <span class="active">Create-Issue</span>
   </section>
 
-
+  <!-- main -->
   <main>
 
     <form class="stepper" action="/create/issue/<%=projectId%>" method="post">

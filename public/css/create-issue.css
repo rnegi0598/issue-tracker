@@ -5,15 +5,23 @@ main {
 .stepper {
   width: 500px;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid lightgrey;
 }
 .accordian {
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   padding: 1em;
+  min-height: 100px;
 }
 
+.accordian h2 {
+  background: #004953;
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0;
+}
 .accordian .accordian-div {
-  background-color: gray;
+  background-color: #aa0000;
+  border-radius: 5px;
   color: white;
   padding: 1em;
   overflow: hidden;
@@ -26,41 +34,77 @@ main {
   display: block;
   border: none;
   outline: none;
-  background-color: lightgray;
   padding: 5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .accordian button {
   outline: none;
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 1em;
-  padding: 5px;
+  padding: 5px 10px;
   text-transform: capitalize;
   cursor: pointer;
+  background: #6f0;
+  color: black;
+  font-weight: 900;
+  border-radius: 2px;
 }
 
 .accordian .accordian-span {
+  background: #fff;
+  color: black;
+  font-weight: 900;
+  border-radius: 2px;
   display: inline-block;
   font-size: 1rem;
   margin-top: 1em;
-  padding: 5px;
+  padding: 5px 10px;
   text-transform: capitalize;
   cursor: pointer;
-  color: black;
-  background-color: white;
 }
 
 /* label  */
 
 .tags-list {
-  /* border: 1px solid red; */
   margin-bottom: 5px;
 }
 .tags-list .tag {
-  border: 1px solid white;
-  padding: 2px 5px;
+  background-color: #6082b6;
+  color: #fff;
+  font-weight: 900;
+  padding: 2px 10px;
   border-radius: 2px;
-  /* margin-bottom: 5px; */
   margin-right: 5px;
+}
+
+/* numbering */
+.accordian {
+  position: relative;
+}
+.accordian h2::before {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  left: -20px;
+  top: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: #191970;
+  color: white;
+}
+.accordian-1 h2::before {
+  content: "1";
+}
+.accordian-2 h2::before {
+  content: "2";
+}
+.accordian-3 h2::before {
+  content: "3";
+}
+.accordian-4 h2::before {
+  content: "4";
 }

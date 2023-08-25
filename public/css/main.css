@@ -5,13 +5,14 @@
 }
 /* navbar */
 nav {
-  background-color: #e5e4e2;
+  background: #343434;
+  color: white;
   padding: 10px 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav h2 a{
+nav h2 a {
   text-decoration: none;
   color: inherit;
 }
@@ -23,7 +24,11 @@ nav .avatar-wrapper {
 .breadcrumbs {
   padding: 10px 5vw;
 }
-.breadcrumbs .separator{
+.breadcrumbs a{
+  color: inherit;
+  text-decoration: none;
+}
+.breadcrumbs .separator {
   margin: 0 1px;
 }
 .breadcrumbs span {

@@ -12,7 +12,7 @@
 <body>
   <%- include('../partials/navbar.ejs') %>
   <section class="breadcrumbs">
-    <span>home</span>
+    <span><a href="/">home</a></span>
     <span class="separator active">/</span>
     <span class="active">Create-Project</span>
   </section>
@@ -22,14 +22,14 @@
     <form class="stepper" action="/create/project" method="post">
       <div class="accordian accordian-1">
         <h2>Enter Project Title</h2>
-        <p>
+        <p class="accordian-div">
           <input name="title" type="text" required>
           <span class="next">Next</span>
         </p>
       </div>
       <div class="accordian accordian-2">
         <h2>Enter Project Author</h2>
-        <p class="fold">
+        <p class="fold accordian-div">
           <input name="author" type="text" required>
           <span class="next">Next</span>
           <span class="back">Back</span>
@@ -38,7 +38,7 @@
       </div>
       <div class="accordian accordian-3">
         <h2>Enter Project Description</h2>
-        <p class="fold">
+        <p class="fold accordian-div">
           <input name="description" type="text" required><br>
           <button class="finish" type="submit">Finish</button>
           <span class="back">Back</span>

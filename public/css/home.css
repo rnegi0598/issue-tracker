@@ -1,17 +1,17 @@
-
-
 /* projects  */
 
 .projects-display {
   margin: 10px 5vw;
 }
 .projects-display .projects-header {
+  background: #301934;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #c0c0c0;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
 .projects-header a {
@@ -22,6 +22,7 @@
   border: none;
   padding: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .projects-wrapper {
@@ -38,11 +39,13 @@
   cursor: pointer;
   flex-grow: 1;
   align-self: flex-start;
-  
 }
 .project-wrapper {
+  background: #181970;
+  color: #fff;
   padding: 1em;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .project-wrapper .project-flex {
@@ -62,4 +65,3 @@
 .project-wrapper .value {
   font-size: 1rem;
 }
-
