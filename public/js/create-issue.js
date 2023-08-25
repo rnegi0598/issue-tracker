@@ -55,7 +55,7 @@ tagInput.addEventListener("keydown", function (event) {
     });
     tagsList.innerHTML = htmlElem;
     tagInput.value = ""; // Clear the input
-    console.log(tagArray);
+    // console.log(tagArray);
   }
 });
 
@@ -85,7 +85,6 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent the default form submission
-  console.log(titleInput.value ,authorInput.value ,descriptionInput.value);
   if (!titleInput.value || !authorInput.value || !descriptionInput.value) {
     return;
   }

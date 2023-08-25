@@ -9,8 +9,6 @@ const getProjects = async (req, res) => {
 const getProject = async(req, res) => {
   const {projectId}=req.params;
   const project= await Project.findById(projectId).populate('issues').exec();
-  console.log(project);
-  console.log(project.issues);
   res.render("pages/project",{project});
 };
 
@@ -19,7 +17,6 @@ const getCreateProject = (req, res) => {
 };
 
 const postCreateProject = async(req, res) => {
-  console.log(req.body);
   const {title,author,description}=req.body;
   const project=new Project({
     title,

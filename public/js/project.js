@@ -19,7 +19,7 @@ for (let i = 0; i < issuesChildren.length; i++) {
   });
 }
 
-console.log(issuesArr);
+// console.log(issuesArr);
 // filter
 const titleInput = document.querySelector(".title-filter  input");
 const authorInput = document.querySelector(".author-filter  input");
@@ -78,7 +78,7 @@ function clearTagsHandler() {
 
   labelInput.value = "";
 
-  console.log(filterArr);
+  // console.log(filterArr);
   //   display the  issues after clearing tags
   let issueInnerHtml = "";
   for (let i = 0; i < filterArr.length; i++) {
@@ -172,7 +172,7 @@ function filterHandler(event) {
     // descriptionInput.value = "";
     labelInput.value = "";
 
-    console.log(filterArr);
+    // console.log(filterArr);
 
     //display updated results
     let issueInnerHtml = "";

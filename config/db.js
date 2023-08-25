@@ -2,15 +2,16 @@ const mongoose = require("mongoose");
 
 const dbConnect = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017',{
-        dbName:'issue-tracker'
-    });
-    console.log('db connected');
+    await mongoose.connect(
+      "mongodb+srv://rnegi0598:hNSc9UrmcQ73MeJT@cluster0.j0elyxo.mongodb.net/?retryWrites=true&w=majority",
+      {
+        dbName: "issue-tracker",
+      }
+    );
+    console.log("db connected");
   } catch (err) {
     console.log(err);
   }
 };
 
-
-
-module.exports=dbConnect;
+module.exports = dbConnect;
